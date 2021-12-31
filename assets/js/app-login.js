@@ -1,4 +1,4 @@
-//https://reqres.in
+
 
 var App = (function () {
   App.login = function () {
@@ -7,12 +7,12 @@ var App = (function () {
     //Js Code
 
     $(".login-submit").click(function () {
-      var username = $("#email").val();
+      var no_pengguna = $("#no_pengguna").val();
       var password = $("#password").val();
 
-      postData("https://reqres.in/api/login", {
-        email: username,
-        password: password,
+      postData("http://eis2.mbi.gov.my:4545/authentication/api/signin", {
+        no_pengguna: no_pengguna,
+        password: password
       }).then((data) => {
         console.log(data); // JSON data parsed by `data.json()` call
       });
